@@ -25,6 +25,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="8dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/expense"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/expense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/addItem">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Expense"
+            android:backgroundTint="@color/white"
+            android:layout_margin="12dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/addItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/secondary_text"
+        android:layout_margin="8dp"
+        android:text="@string/add_claim_item"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

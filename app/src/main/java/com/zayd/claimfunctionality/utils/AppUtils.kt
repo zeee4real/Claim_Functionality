@@ -1,5 +1,6 @@
 package com.zayd.claimfunctionality.utils
 
+import android.view.View
 import android.view.Window
 import androidx.appcompat.widget.Toolbar
 
@@ -13,5 +14,12 @@ object AppUtils {
                 Toolbar.LayoutParams.WRAP_CONTENT
             )
         }
+    }
+
+    fun viewVisible(view: View, visible: Boolean) {
+        if (visible)
+            view.visibility = View.VISIBLE
+        else
+            view.visibility = View.GONE
     }
 }
